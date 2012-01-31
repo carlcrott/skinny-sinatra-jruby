@@ -75,12 +75,9 @@ if [ ! -x "$JAVACMD" ] ; then
   exit 1
 fi
 
-if [ -z "$REPO" ]
-then
-  REPO="$BASEDIR"/.m2/repository
-fi
+REPO="$BASEDIR"/target/dependency
 
-CLASSPATH=$CLASSPATH_PREFIX:"$BASEDIR"/etc:"$REPO"/org/jruby/jruby-complete/1.6.3/jruby-complete-1.6.3.jar
+CLASSPATH=$CLASSPATH_PREFIX:"$BASEDIR"/etc:"$REPO"/jruby-complete.jar
 EXTRA_JVM_ARGUMENTS=""
 
 echo "Classpath is: $CLASSPATH"
