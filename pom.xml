@@ -42,7 +42,7 @@
 						</goals>
 						<configuration>
 							<args>
-								script/bundle install --without development:test --path vendor/bundle --binstubs bin/ --deployment
+								script/bundle install --without development:test
 							</args>
 						</configuration>
 					</execution>
