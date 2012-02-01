@@ -41,9 +41,7 @@
 							<goal>jruby</goal>
 						</goals>
 						<configuration>
-							<args>
-								script/bundle install --without development:test
-							</args>
+							<args>script/bundle install --without development:test</args>
 						</configuration>
 					</execution>
 				 </executions>
