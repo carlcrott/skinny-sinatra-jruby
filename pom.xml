@@ -31,7 +31,7 @@
 							<goal>jruby</goal>
 						</goals>
 						<configuration>
-						 <args>-S gem install bundler --no-ri --no-rdoc --install-dir .gems</args>
+						 <args>-S gem install bundler --no-ri --no-rdoc --install-dir vendor/bundle</args>
 						</configuration>
 					</execution>
 					<execution>
@@ -42,7 +42,7 @@
 						</goals>
 						<configuration>
 							<args>
-								-e ENV['GEM_HOME']=File.join(Dir.pwd,'.gems');ENV['GEM_PATH']=File.join(Dir.pwd,'.gems');ENV['BUNDLE_GEMFILE']=File.join(Dir.pwd,'Jemfile');require'rubygems';require'bundler';require'bundler/cli';cli=Bundler::CLI.new;cli.install
+								script/bundle install --without development:test --path vendor/bundle --binstubs bin/ --deployment
 							</args>
 						</configuration>
 					</execution>

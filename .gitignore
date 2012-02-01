@@ -4,3 +4,6 @@ target/
 work/
 .gems/
 .rbenv-version
+.bundle
+bin
+vendor
