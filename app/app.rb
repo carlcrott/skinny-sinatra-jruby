@@ -5,7 +5,7 @@ Bundler.require
 
 require 'sinatra'
 
-this_dir = Pathname.new(File.dirname(__FILE__))
+
 
 
 get '/' do
@@ -14,6 +14,8 @@ end
 
 
 get '/parse' do
+
+  this_dir = Pathname.new(File.dirname(__FILE__))
 
   def oscar_parse
     jars = [
