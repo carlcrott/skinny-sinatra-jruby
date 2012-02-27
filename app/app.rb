@@ -49,11 +49,11 @@ get '/parse' do
 
 
 
-#  "#{$CLASSPATH.to_s}"
+  "#{$CLASSPATH.to_s}"
   
 
 
-  "#{oscarizer}"
+#  "#{oscarizer}"
   
 
 end
