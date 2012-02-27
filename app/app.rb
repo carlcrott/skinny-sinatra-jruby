@@ -48,6 +48,8 @@ get '/parse' do
     return codified.join("***")
   end
 
+  "#{oscar_parse}"
+  
 
 end
 
