@@ -20,8 +20,8 @@ get '/parse' do
   def oscarizer
 
     class_paths = [
-      "./jars/commons-lang-2.1.jar",
-      "./jars/oscar4-all-4.1-with-dependencies.jar"
+      "file:./jars/commons-lang-2.1.jar",
+      "file:./jars/oscar4-all-4.1-with-dependencies.jar"
     ]
 
     for class_path in class_paths
@@ -49,7 +49,7 @@ get '/parse' do
 
 
 
-  "#{$CLASSPATH.to_s}"
+  "CLASS: #{$CLASSPATH.class}  VALUE:   #{$CLASSPATH.to_s}"
   
 
 
