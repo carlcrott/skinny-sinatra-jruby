@@ -82,7 +82,7 @@ CLASSPATH=$CLASSPATH_PREFIX:"$BASEDIR"/etc:"$REPO"/jruby-complete.jar
 #CLASSPATH>>"file:./jars/commons-lang-2.1.jar"
 #CLASSPATH>>"file:./jars/oscar4-all-4.1-with-dependencies.jar"
 
-CLASSPATH="${CLASSPATH}:file:./jars/oscar4-all-4.1-with-dependencies.jar"
+#CLASSPATH="${CLASSPATH}:file:./jars/oscar4-all-4.1-with-dependencies.jar"
 
 #      "./jars/commons-lang-2.1.jar",
 #      "./jars/oscar4-all-4.1-with-dependencies.jar"
