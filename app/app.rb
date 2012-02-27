@@ -9,8 +9,10 @@ get '/' do
   "Hello Hackers!!"
 
     jars = [
-      "#{Rails.root}/jars/commons-lang-2.1.jar", 
-      "#{Rails.root}/jars/oscar4-all-4.1-with-dependencies.jar", 
+#      "#{Rails.root}/jars/commons-lang-2.1.jar", 
+#      "#{Rails.root}/jars/oscar4-all-4.1-with-dependencies.jar", 
+      ".:/jars/commons-lang-2.1.jar", 
+      ".:/jars/oscar4-all-4.1-with-dependencies.jar", 
     ]
 
     Rjb::load(classpath = jars.join(':'), jvmargs=[])
