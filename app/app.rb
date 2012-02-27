@@ -3,6 +3,8 @@ require 'bundler'
 
 require 'java'
 
+require 'commons-lang-2.1.jar'
+require 'oscar4-all-4.1-with-dependencies.jar'
 
 Bundler.require
 
@@ -49,11 +51,8 @@ get '/parse' do
 
 
 
-  "CLASS: #{$CLASSPATH.class}  VALUE:   #{$CLASSPATH.to_s}"
-  
-
-
-#  "#{oscarizer}"
+#  "CLASS: #{$CLASSPATH.class}  VALUE:   #{$CLASSPATH.to_s}"
+  "#{oscarizer}"
   
 
 end
