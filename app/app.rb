@@ -5,14 +5,20 @@ Bundler.require
 
 require 'sinatra'
 
+this_dir = Pathname.new(File.dirname(__FILE__))
+
+
 get '/' do
   "Hello Hackers!!"
+end
 
+
+get '/parse' do
+
+  def oscar_parse
     jars = [
-#      "#{Rails.root}/jars/commons-lang-2.1.jar", 
-#      "#{Rails.root}/jars/oscar4-all-4.1-with-dependencies.jar", 
-      ".:/jars/commons-lang-2.1.jar", 
-      ".:/jars/oscar4-all-4.1-with-dependencies.jar", 
+      "#{this_dir}/jars/commons-lang-2.1.jar", 
+      "#{this_dir}/oscar4-all-4.1-with-dependencies.jar", 
     ]
 
     Rjb::load(classpath = jars.join(':'), jvmargs=[])
@@ -41,9 +47,6 @@ get '/' do
     # can return this as JSON
     return codified.join("***")
   end
-
-
-
 
 
 end
