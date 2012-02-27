@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'bundler'
-require 'pathname'
+
 require 'java'
 
 
@@ -12,23 +12,20 @@ require 'sinatra'
 
 
 get '/' do
-  "Hello Hackers!!"
+  "Hello Hackers    3!!"
 end
 
 
 get '/parse' do
   def oscarizer
-    this_dir = Pathname.new(File.dirname(__FILE__))
 
-    # specify individual .jars used in this project
     class_paths = [
-      "commons-lang-2.1.jar",
-      "oscar4-all-4.1-with-dependencies.jar"
+      "./jars/commons-lang-2.1.jar",
+      "./jars/oscar4-all-4.1-with-dependencies.jar"
     ]
 
     for class_path in class_paths
-      jar_path = (this_dir + class_path)
-      $CLASSPATH << jar_path
+      $CLASSPATH << class_path
     end
 
     include_class "uk.ac.cam.ch.wwmm.oscar.chemnamedict.entities.ChemicalStructure"
@@ -50,6 +47,9 @@ get '/parse' do
 
   end
 
+
+
+#  "#{$CLASSPATH.to_s}"
   
 
 
