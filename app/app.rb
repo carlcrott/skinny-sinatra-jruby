@@ -16,9 +16,10 @@ end
 
 get '/parse' do
 
-  this_dir = Pathname.new(File.dirname(__FILE__))
-
   def oscar_parse
+
+    this_dir = Pathname.new(File.dirname(__FILE__))
+
     jars = [
       "#{this_dir}/jars/commons-lang-2.1.jar", 
       "#{this_dir}/oscar4-all-4.1-with-dependencies.jar", 
