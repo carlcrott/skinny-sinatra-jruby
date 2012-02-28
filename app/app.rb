@@ -3,12 +3,6 @@ require 'bundler'
 
 require 'java'
 
-require './commons-lang-2.1.jar'
-require './oscar4-all-4.1-with-dependencies.jar'
-
-require '.commons-lang-2.1.jar'
-require '.oscar4-all-4.1-with-dependencies.jar'
-
 require File.expand_path('commons-lang-2.1.jar', File.dirname(__FILE__))
 require File.expand_path('oscar4-all-4.1-with-dependencies.jar', File.dirname(__FILE__))
 
@@ -61,8 +55,8 @@ get '/parse' do
 
 
 #  "CLASS: #{$CLASSPATH.class}  VALUE:   #{$CLASSPATH.to_s}"
-  "#{$LOAD_PATH}"
-#  "#{oscarizer}"
+#  "#{$LOAD_PATH}"
+  "#{oscarizer}"
   
 
 end
