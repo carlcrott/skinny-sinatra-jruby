@@ -1,4 +1,4 @@
-== Sample app using JRuby and Sinatra on Heroku platform.
+== OSCAR sinatra API
 
 Forked from:
 
