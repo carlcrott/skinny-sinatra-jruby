@@ -12,8 +12,6 @@ Bundler.require
 require 'sinatra'
 
 
-
-
 get '/' do
   "Hello Hackers    3!!"
 end
@@ -21,17 +19,6 @@ end
 
 get '/parse' do
   def oscarizer
-
-    class_paths = [
-      "file:./jars/commons-lang-2.1.jar",
-      "file:./jars/oscar4-all-4.1-with-dependencies.jar",
-      "./jars/commons-lang-2.1.jar",
-      "./jars/oscar4-all-4.1-with-dependencies.jar",
-    ]
-
-    for class_path in class_paths
-      $CLASSPATH << class_path
-    end
 
     include_class "uk.ac.cam.ch.wwmm.oscar.chemnamedict.entities.ChemicalStructure"
     include_class "uk.ac.cam.ch.wwmm.oscar.chemnamedict.entities.FormatType"
