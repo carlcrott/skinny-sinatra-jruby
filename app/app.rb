@@ -34,12 +34,12 @@ get '/parse' do
     entities = oscar.findAndResolveNamedEntities(tester)
 
     for ne in entities
-      puts ne.getSurface()
+#      puts ne.getSurface()
       output_process << ne.getSurface()
 
       inchi = ne.getFirstChemicalStructure(FormatType::INCHI)
       if inchi != nil 
-        puts inchi
+#        puts inchi
         output_process << inchi
       end
     end
