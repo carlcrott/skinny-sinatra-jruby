@@ -3,7 +3,7 @@ require 'bundler'
 
 require 'java'
 
-require File.expand_path('commons-lang-2.1.jar', File.dirname(__FILE__))
+#require File.expand_path('commons-lang-2.1.jar', File.dirname(__FILE__))
 require File.expand_path('oscar4-all-4.1-with-dependencies.jar', File.dirname(__FILE__))
 
 
