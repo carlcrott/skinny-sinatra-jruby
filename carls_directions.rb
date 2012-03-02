@@ -8,7 +8,6 @@ heroku create --stack cedar
 git push heroku oscar:master
 
 
-
 # inserted jar files and added to .gitignore
 
 
