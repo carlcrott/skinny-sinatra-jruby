@@ -8,7 +8,6 @@ heroku create --stack cedar
 git push heroku oscar:master
 
 
-
 # inserted jar files and added to .gitignore
 
 
@@ -25,3 +24,9 @@ need to set the classpath correctly
 # ----------------------- refs
 
 http://chris.chowie.net/2011/08/28/Sinatra-with-JRuby-on-Heroku/
+
+
+
+
+# analyze app
+jruby --profile
