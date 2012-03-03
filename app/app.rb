@@ -1,21 +1,21 @@
-require 'rubygems'
-require 'bundler'
-
 require 'java'
-
-#require File.expand_path('commons-lang-2.1.jar', File.dirname(__FILE__))
+require 'sinatra'
 require File.expand_path('oscar4-all-4.1-with-dependencies.jar', File.dirname(__FILE__))
 
-
-Bundler.require
-
-require 'sinatra'
+helpers do
+  def request_headers
+    env.inject({}){|acc, (k,v)| acc[$1.downcase] = v if k =~ /^http_(.*)/i; acc}
+  end
+end
 
 
 get '/' do
   "Hello Hackers    3!!"
 end
 
+get '/headers' do
+  "#{request_headers.inspect}"
+end
 
 get '/parse' do
   def oscarizer
