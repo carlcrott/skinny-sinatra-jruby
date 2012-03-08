@@ -41,7 +41,7 @@ get '/parse' do
         output_process << inchi
       end
     end
-    return output_process.join("\n")
+    return output_process.join("**!**")
   end
 
   input = request_headers['process']
@@ -73,7 +73,7 @@ get '/parse_test' do
         output_process << inchi
       end
     end
-    return output_process.join("<br />")
+    return output_process.join("**!**")
   end
 
   "#{oscarizer}"
